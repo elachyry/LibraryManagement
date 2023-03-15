@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.DialogPane?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<DialogPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="442.0" prefWidth="827.0" style="-fx-background-color: linear-gradient(to right, #0077B6, #48CAE4); -fx-border-color: #023e8a; -fx-border-width: 5px;" stylesheets="@../../DashboardAdmin/DashboardStyle.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="DashboardMember.Controllers.BookBorroedInfoController">
+   <content>
+      <HBox alignment="BOTTOM_LEFT" prefHeight="385.0" prefWidth="733.0" styleClass="grad">
+         <children>
+            <ImageView fx:id="BookImage" fitHeight="350.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" styleClass="shadow">
+               <HBox.margin>
+                  <Insets bottom="20.0" left="10.0" top="15.0" />
+               </HBox.margin>
+               <image>
+                  <Image url="@../../../../../../Desktop/Books/9780593081259.jpg" />
+               </image>
+            </ImageView>
+            <HBox alignment="CENTER" prefHeight="345.0" prefWidth="577.0">
+               <HBox.margin>
+                  <Insets left="30.0" />
+               </HBox.margin>
+               <children>
+                  <VBox alignment="BOTTOM_LEFT" prefHeight="200.0" prefWidth="250.0" spacing="25.0">
+                     <children>
+                        <Label text="Book Title:">
+                           <font>
+                              <Font name="Century Gothic Bold" size="28.0" />
+                           </font>
+                        </Label>
+                        <Label text="Author:">
+                           <font>
+                              <Font name="Century Gothic Bold" size="28.0" />
+                           </font>
+                        </Label>
+                        <Label text="Borrowing Date:">
+                           <font>
+                              <Font name="Century Gothic Bold" size="28.0" />
+                           </font>
+                        </Label>
+                        <Label text="Number Of Days:">
+                           <font>
+                              <Font name="Century Gothic Bold" size="28.0" />
+                           </font>
+                        </Label>
+                        <Label text="Return Date:">
+                           <font>
+                              <Font name="Century Gothic Bold" size="28.0" />
+                           </font>
+                        </Label>
+                        <Label text="Status:">
+                           <font>
+                              <Font name="Century Gothic Bold" size="28.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </VBox>
+                  <VBox alignment="BOTTOM_LEFT" prefHeight="345.0" prefWidth="326.0" spacing="25.0">
+                     <children>
+                        <Label fx:id="Title" text="Book Title:">
+                           <font>
+                              <Font name="Century Gothic" size="28.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="Author" text="Author:">
+                           <font>
+                              <Font name="Century Gothic" size="28.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="BorrowingDate" text="Borrowing Date:">
+                           <font>
+                              <Font name="Century Gothic" size="28.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="NbrDays" text="Number Of Days:">
+                           <font>
+                              <Font name="Century Gothic" size="28.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="ReturnDate" text="Return Date:">
+                           <font>
+                              <Font name="Century Gothic" size="28.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="Status" text="Status:">
+                           <font>
+                              <Font name="Century Gothic" size="28.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+         </children>
+      </HBox>
+   </content>
+   <header>
+      <HBox alignment="CENTER_RIGHT" prefHeight="45.0" prefWidth="733.0" styleClass="grad">
+         <children>
+            <Label minHeight="-Infinity" prefHeight="36.0" prefWidth="286.0" text="Book Informations" textFill="#023e8a">
+               <font>
+                  <Font name="Berlin Sans FB" size="32.0" />
+               </font>
+               <HBox.margin>
+                  <Insets right="470.0" />
+               </HBox.margin>
+            </Label>
+            <ImageView fx:id="Close" fitHeight="150.0" fitWidth="35.0" onMouseClicked="#Close" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../Images/Close_48px.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+         </children>
+         <padding>
+            <Insets right="10.0" />
+         </padding>
+      </HBox>
+   </header>
+</DialogPane>

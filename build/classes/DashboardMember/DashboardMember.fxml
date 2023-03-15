@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="1000.0" prefWidth="1900.0" stylesheets="@../DashboardAdmin/DashboardStyle.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="DashboardMember.DashboardController">
+   <children>
+      <BorderPane prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <center>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+               <children>
+                  <BorderPane prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <center>
+                        <StackPane fx:id="PagesArea" prefHeight="730.0" prefWidth="1099.0" BorderPane.alignment="CENTER" />
+                     </center>
+                     <top>
+                        <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" style="-fx-background-color: #fff0f5;" BorderPane.alignment="CENTER">
+                           <children>
+                              <AnchorPane prefHeight="100.0" prefWidth="982.0" styleClass="topbar" HBox.hgrow="ALWAYS">
+                                 <children>
+                                    <HBox alignment="CENTER_RIGHT" layoutX="1292.0" layoutY="13.0" prefHeight="70.0" prefWidth="373.0" AnchorPane.rightAnchor="10.0">
+                                       <children>
+                                          <Label fx:id="FullName" minWidth="-Infinity" prefHeight="45.0" prefWidth="247.0" text="Mohammed Elachyry">
+                                             <font>
+                                                <Font name="Century Gothic" size="20.0" />
+                                             </font>
+                                          </Label>
+                                          <Circle fx:id="ProfileImage" fill="#1f93ff00" onMouseClicked="#Profile2" radius="35.0" stroke="BLACK" strokeType="INSIDE">
+                                             <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                             </cursor>
+                                          </Circle>
+                                       </children>
+                                    </HBox>
+                                    <Pane layoutX="480.0" layoutY="52.0" prefHeight="2.0" prefWidth="1092.0" style="-fx-background-color: #023e8a;" visible="false" AnchorPane.leftAnchor="-20.0" AnchorPane.rightAnchor="350.0" />
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </HBox>
+                     </top>
+                  </BorderPane>
+               </children>
+            </AnchorPane>
+         </center>
+         <left>
+            <AnchorPane prefHeight="569.0" prefWidth="325.0" style="-fx-background-color: linear-gradient(to bottom left, #FFF, #DFF8FE);" BorderPane.alignment="CENTER">
+               <children>
+                  <VBox alignment="TOP_CENTER" prefHeight="802.0" prefWidth="325.0" styleClass="sidebar" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <VBox minHeight="-Infinity" minWidth="-Infinity" prefHeight="569.0" prefWidth="325.0" spacing="20.0" stylesheets="@../Documents/NetBeansProjects/Gestion%20Bibliotheque/src/DashboardMember/DashboardStyle.css" VBox.vgrow="ALWAYS">
+                           <children>
+                              <VBox alignment="CENTER" spacing="10.0">
+                                 <children>
+                                    <ImageView fitHeight="207.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../Images/reading_127px.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Label alignment="CENTER" text="Gestion de Biblio" textFill="#023e8a">
+                                       <font>
+                                          <Font name="Century Gothic" size="36.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets top="5.0" />
+                                 </VBox.margin>
+                              </VBox>
+                              <VBox spacing="15.0">
+                                 <children>
+                                    <Label minWidth="-Infinity" prefHeight="45.0" prefWidth="247.0" text="BROWS">
+                                       <font>
+                                          <Font name="Century Gothic Bold" size="30.0" />
+                                       </font>
+                                       <VBox.margin>
+                                          <Insets left="10.0" />
+                                       </VBox.margin>
+                                    </Label>
+                                    <JFXButton fx:id="NewBooks" alignment="BASELINE_LEFT" focusTraversable="false" graphicTextGap="25.0" onAction="#NewBooks" prefHeight="55.0" prefWidth="325.0" styleClass="SideButton" text="New Books" textFill="WHITE">
+                                       <graphic>
+                                          <ImageView fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../Images/new_64px.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                       <padding>
+                                          <Insets left="67.0" />
+                                       </padding>
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                       <font>
+                                          <Font name="Berlin Sans FB" size="28.0" />
+                                       </font>
+                                    </JFXButton>
+                                    <JFXButton fx:id="Books" alignment="BASELINE_LEFT" focusTraversable="false" graphicTextGap="25.0" onAction="#Books" prefHeight="55.0" prefWidth="325.0" styleClass="SideButton" text="All Books" textFill="WHITE">
+                                       <graphic>
+                                          <ImageView fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../Images/Books_F.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                       <padding>
+                                          <Insets left="67.0" />
+                                       </padding>
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                       <font>
+                                          <Font name="Berlin Sans FB" size="28.0" />
+                                       </font>
+                                    </JFXButton>
+                                    <JFXButton fx:id="Authors" alignment="BASELINE_LEFT" focusTraversable="false" graphicTextGap="25.0" onAction="#Authors" prefHeight="55.0" prefWidth="325.0" styleClass="SideButton" text="Authors" textFill="WHITE">
+                                       <graphic>
+                                          <ImageView fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../Images/Author_F.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                       <padding>
+                                          <Insets left="67.0" />
+                                       </padding>
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                       <font>
+                                          <Font name="Berlin Sans FB" size="28.0" />
+                                       </font>
+                                    </JFXButton>
+                                    <JFXButton fx:id="Categories" alignment="BASELINE_LEFT" focusTraversable="false" graphicTextGap="25.0" onAction="#Categories" prefHeight="55.0" prefWidth="325.0" styleClass="SideButton" text="Categories" textFill="WHITE">
+                                       <graphic>
+                                          <ImageView fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../Images/Category_F.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                       <padding>
+                                          <Insets left="67.0" />
+                                       </padding>
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                       <font>
+                                          <Font name="Berlin Sans FB" size="28.0" />
+                                       </font>
+                                    </JFXButton>
+                                 </children>
+                              </VBox>
+                              <Pane prefHeight="2.0" prefWidth="300.0" style="-fx-background-color: #828282;" />
+                              <VBox spacing="15.0">
+                                 <children>
+                                    <Label minWidth="-Infinity" prefHeight="45.0" prefWidth="247.0" text="YOUR BOOKS">
+                                       <font>
+                                          <Font name="Century Gothic Bold" size="30.0" />
+                                       </font>
+                                       <VBox.margin>
+                                          <Insets left="10.0" />
+                                       </VBox.margin>
+                                    </Label>
+                                    <JFXButton fx:id="BooksBorrowed" alignment="BASELINE_LEFT" focusTraversable="false" graphicTextGap="25.0" onAction="#Books_Borrowed" prefHeight="55.0" prefWidth="325.0" styleClass="SideButton" text="Books Borrowed" textFill="WHITE">
+                                       <graphic>
+                                          <ImageView fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../Images/Borrow_F.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                       <padding>
+                                          <Insets left="67.0" />
+                                       </padding>
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                       <font>
+                                          <Font name="Berlin Sans FB" size="28.0" />
+                                       </font>
+                                    </JFXButton>
+                                    <JFXButton fx:id="Favorite" alignment="BASELINE_LEFT" focusTraversable="false" graphicTextGap="25.0" onAction="#Favorite" prefHeight="55.0" prefWidth="325.0" styleClass="SideButton" text="Favorite" textFill="WHITE">
+                                       <graphic>
+                                          <ImageView fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../Images/Favorite_64px.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                       <padding>
+                                          <Insets left="67.0" />
+                                       </padding>
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                       <font>
+                                          <Font name="Berlin Sans FB" size="28.0" />
+                                       </font>
+                                    </JFXButton>
+                                 </children>
+                              </VBox>
+                              <Pane prefHeight="2.0" prefWidth="300.0" style="-fx-background-color: #828282;" />
+                              <VBox spacing="15.0">
+                                 <children>
+                                    <Label minWidth="-Infinity" prefHeight="45.0" prefWidth="247.0" text="YOUR PROFILE">
+                                       <font>
+                                          <Font name="Century Gothic Bold" size="30.0" />
+                                       </font>
+                                       <VBox.margin>
+                                          <Insets left="10.0" />
+                                       </VBox.margin>
+                                    </Label>
+                                    <JFXButton fx:id="Profile" alignment="BASELINE_LEFT" focusTraversable="false" graphicTextGap="25.0" onAction="#Profile" prefHeight="55.0" prefWidth="325.0" styleClass="SideButton" text="Profile" textFill="WHITE">
+                                       <graphic>
+                                          <ImageView fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../Images/Profile_F.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                       <padding>
+                                          <Insets left="67.0" />
+                                       </padding>
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                       <font>
+                                          <Font name="Berlin Sans FB" size="28.0" />
+                                       </font>
+                                    </JFXButton>
+                                    <JFXButton fx:id="Logout" alignment="BASELINE_LEFT" focusTraversable="false" graphicTextGap="25.0" onMouseClicked="#Logout" prefHeight="55.0" prefWidth="325.0" styleClass="SideButton" text="Logout" textFill="WHITE">
+                                       <graphic>
+                                          <ImageView fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../Images/Logout_F.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                       <padding>
+                                          <Insets left="67.0" />
+                                       </padding>
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                       <font>
+                                          <Font name="Berlin Sans FB" size="28.0" />
+                                       </font>
+                                    </JFXButton>
+                                 </children>
+                              </VBox>
+                           </children>
+                           <VBox.margin>
+                              <Insets top="10.0" />
+                           </VBox.margin>
+                        </VBox>
+                     </children>
+                  </VBox>
+               </children>
+            </AnchorPane>
+         </left>
+      </BorderPane>
+   </children>
+</AnchorPane>

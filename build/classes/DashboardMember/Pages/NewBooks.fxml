@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXDialog?>
+<?import com.jfoenix.controls.JFXDialogLayout?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<StackPane fx:id="PagesArea" prefHeight="900.0" prefWidth="1600.0" stylesheets="@../../DashboardAdmin/DashboardStyle.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="DashboardMember.Controllers.MemberNewBooksController">
+   <children>
+      <AnchorPane fx:id="anchorPane" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+         <children>
+            <BorderPane prefHeight="604.0" prefWidth="1092.0" styleClass="grad" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <center>
+                  <VBox BorderPane.alignment="CENTER">
+                     <BorderPane.margin>
+                        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                     </BorderPane.margin>
+                     <children>
+                        <Pane prefHeight="95.0" prefWidth="1560.0">
+                           <children>
+                              <Label layoutY="8.0" prefHeight="46.0" prefWidth="294.0" text="New Books:" textFill="#023e8a">
+                                 <font>
+                                    <Font name="Century Gothic Bold" size="41.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </Pane>
+                        <ScrollPane focusTraversable="false" prefHeight="561.0" prefWidth="1560.0" style="-fx-border-color: transparent; -fx-background-color: linear-gradient(to top right,#FFF, #DFF8FE );" styleClass="mylistview" VBox.vgrow="ALWAYS">
+                           <content>
+                              <GridPane fx:id="Container">
+                                 <rowConstraints>
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                              </GridPane>
+                           </content>
+                        </ScrollPane>
+                     </children>
+                  </VBox>
+               </center>
+               <top>
+                  <VBox fx:id="vb" prefHeight="271.0" prefWidth="1600.0" BorderPane.alignment="CENTER">
+                     <padding>
+                        <Insets bottom="5.0" left="20.0" right="20.0" top="5.0" />
+                     </padding>
+                     <children>
+                        <Label prefHeight="52.0" prefWidth="753.0" text="Recommended:" textFill="#023e8a">
+                           <font>
+                              <Font name="Century Gothic Bold" size="41.0" />
+                           </font>
+                        </Label>
+                        <HBox fx:id="hbLayout" alignment="CENTER" prefHeight="209.0" prefWidth="1592.0" spacing="33.0" />
+                     </children>
+                  </VBox>
+               </top>
+            </BorderPane>
+         </children>
+      </AnchorPane>
+      <JFXDialog fx:id="Dialog2">
+             <JFXDialogLayout>
+                 <body>
+                     <Label fx:id="DialogLabel" />
+                 </body>
+                 <actions>
+                     <JFXButton fx:id="YesButton">Yes</JFXButton>
+                     <JFXButton fx:id="NoButton">No</JFXButton>
+                 </actions>
+             </JFXDialogLayout>
+      </JFXDialog>
+   </children>
+</StackPane>

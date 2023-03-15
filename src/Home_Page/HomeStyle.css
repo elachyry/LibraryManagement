@@ -1,0 +1,10 @@
+.Menu:hover{
+    -fx-cursor: hand;
+    
+}
+
+.btn:hover{
+    -fx-cursor: hand;
+    -fx-background-color: #EC255A;
+    
+}

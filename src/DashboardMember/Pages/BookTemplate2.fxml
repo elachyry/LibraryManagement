@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+
+<HBox alignment="CENTER_LEFT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="200.0" prefWidth="364.0" style="-fx-background-color: linear-gradient(to right, #0077B6, #48CAE4);" stylesheets="@../../DashboardAdmin/DashboardStyle.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="DashboardMember.Controllers.BookTemplate2Controller">
+   <children>
+      <ImageView fx:id="BookImage" fitHeight="180.0" fitWidth="123.0" onMouseClicked="#BookClick" pickOnBounds="true" preserveRatio="true">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <image>
+            <Image url="@../../../../../../Desktop/Books/9780593081259.jpg" />
+         </image>
+         <HBox.margin>
+            <Insets left="10.0" />
+         </HBox.margin>
+      </ImageView>
+      <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="200.0" prefWidth="239.0">
+         <children>
+            <VBox alignment="CENTER" prefHeight="147.0" prefWidth="223.0" spacing="10.0">
+               <children>
+                  <Label fx:id="BookTilte" alignment="CENTER" prefHeight="25.0" prefWidth="266.0" text="The Wrath &amp; the Dawn" textFill="WHITE">
+                     <font>
+                        <Font name="Century Gothic Bold" size="20.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="BookAuthor" alignment="CENTER" prefHeight="26.0" prefWidth="269.0" text="MEGHA MAJUMDAR" textFill="WHITE">
+                     <font>
+                        <Font name="Century Gothic" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="BookStatus" alignment="CENTER" prefHeight="26.0" prefWidth="180.0" text="IN STOCK">
+                     <font>
+                        <Font name="Century Gothic Bold" size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </VBox>
+            <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="38.0" prefWidth="240.0">
+               <children>
+                  <ImageView fx:id="Fav2" fitHeight="38.0" fitWidth="38.0" layoutX="195.0" onMouseClicked="#AddToFav" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../Images/Favorite2_64px.png" />
+                     </image>
+                  </ImageView>
+                  <JFXButton fx:id="button" focusTraversable="false" layoutX="71.0" onMouseClicked="#ButtonClick" prefHeight="31.0" prefWidth="99.0" text="Borrow">
+                     <font>
+                        <Font name="Century Gothic" size="19.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </JFXButton>
+                  <ImageView fx:id="Fav1" fitHeight="38.0" fitWidth="38.0" layoutX="195.0" onMouseClicked="#RemoveFromFav" pickOnBounds="true" preserveRatio="true" visible="false">
+                     <image>
+                        <Image url="@../../Images/FavoriteRed_64px.png" />
+                     </image>
+                  </ImageView>
+               </children>
+               <VBox.margin>
+                  <Insets bottom="15.0" />
+               </VBox.margin>
+            </AnchorPane>
+         </children>
+      </VBox>
+   </children>
+   <styleClass>
+      <String fx:value="shadow" />
+      <String fx:value="radios" />
+   </styleClass>
+</HBox>

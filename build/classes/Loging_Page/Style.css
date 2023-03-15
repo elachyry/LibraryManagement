@@ -1,0 +1,52 @@
+.button
+{
+    -fx-background-color :#023e8a;
+    -fx-text-fill : #FFF;
+    -fx-background-radius: 5px;
+    -fx-border-radius: 5px;
+}
+.button:hover{
+    -fx-background-color : #00b4d8;
+}
+
+.btn_login{
+    -fx-background-color :#023e8a;
+    -fx-text-fill : #FFF;
+    -fx-background-radius: 12px;
+}
+
+.btn_login:hover{
+    -fx-cursor: hand;
+    -fx-background-color: #00b4d8;
+    
+}
+
+.btn_login:pressed{
+    -fx-rotate: 1;
+}
+
+.jfx-snackbar-content{
+    -fx-background-color: #F00;
+    -fx-pref-vidth: 500;
+}
+.jfx-snackbar-toast{
+    -fx-text-fill: #FFF;
+    -fx-font-size: 18px;
+    -fx-font-family: Century Gothic;
+}   
+.Check:hover{
+    -fx-cursor: hand;
+}
+
+.Inscription:hover{
+    -fx-text-fill: #00adb5;
+    -fx-cursor: hand;
+}
+.Inscription:pressed{
+    -fx-rotate: 1;
+}
+
+.FPass:hover{
+    -fx-text-fill : #00b4d8;
+
+}

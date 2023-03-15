@@ -1,0 +1,381 @@
+/*@font-face {
+    font-family: 'Gotham';
+    src: url('GothamBook.ttf');
+}*/
+
+.button
+{
+    -fx-background-color :#023e8a;
+    -fx-text-fill : #FFF;
+    -fx-background-radius: 5px;
+    -fx-border-radius: 5px;
+}
+.button:hover{
+    -fx-background-color : #00b4d8;
+}
+
+.sidebar{
+    -fx-background-color: linear-gradient(to top right,#FFF, #DFF8FE );
+    -fx-effect: dropshadow( gaussian , rgba(0,0,0,0.7) , 10,0,0,1 ); 
+    -fx-background-radius:  0 100 0 0;
+}
+
+.topbar{
+    -fx-background-color: linear-gradient(to bottom right, #FFF, #DFF8FE);
+}
+
+.grad{
+    -fx-background-color: linear-gradient(to bottom right, #FFF, #DFF8FE);
+}
+
+.shadow{
+    /*-fx-effect: dropshadow( gaussian , rgba(0,0,0,0.7) , 10,0,0,1 ); */
+    -fx-effect: dropshadow(three-pass-box, rgb(0, 0,0, 0.3), 10, 0, 0, 10);
+}
+
+.radios{
+    -fx-background-radius:  10;
+}
+
+.SideButton{
+    -fx-background-color : transparent;
+    -fx-text-fill : #000;
+}
+.SideButton:hover{
+    -fx-background-color: linear-gradient(to left, #FFF, #DFF8FE );
+    -fx-border-color:  white;
+    -fx-border-width: 0px 0px 0px 4px;
+    -fx-effect: dropshadow( gaussian , rgba(0,0,0,0.7) , 10,0,0,1 ); 
+}
+
+
+
+.container{
+    -fx-background-color : rgba(255,255,255,0.25);
+    -fx-background-radius: 18;
+}
+
+
+.Button2{
+    -fx-background-color :#023e8a;
+    -fx-text-fill : #FFF;
+    -fx-border-width: 1px;
+    -fx-border-color:  #702963;
+    -fx-background-radius: 5px;
+    -fx-border-radius: 5px;
+
+}
+.Button2:hover{
+    -fx-background-color : #00b4d8;
+    -fx-border-color:  #00b4d8;
+
+}
+
+
+.Text1{
+    -fx-font-family: Century Gothic;
+    -fx-font-style: bold;
+    -fx-font-size: 80px;
+}
+
+.table-view {
+    -fx-background-color: transparent;
+}
+
+.table-view .column-header,
+.table-view .column-header-background .filter{
+    -fx-cell-size : 30;
+    -fx-background-color: transparent;
+    -fx-text-background-color: white;
+}
+.table-view .column-header {
+    -fx-font-size:25px;
+    -fx-background-color: transparent;
+} 
+
+.table-view .column-header-background{
+    -fx-background-color: linear-gradient(to right, #0077B6, #48CAE4);
+    -fx-background-radius: 7px 7px 0px 0px;
+    -fx-padding: 0 0 7px 0;
+}
+
+table-view .column-header .label{
+    -fx-text-fill : black;
+    -fx-font-weight: bold;
+    -fx-text-aligment: CENTER;
+}
+
+.table-column {
+    -fx-alignment: CENTER;
+}
+
+
+.table-row-cell:hover {
+    -fx-text-background-color: #4361ee;
+}
+.table-row-cell:odd{
+    -fx-background-color: #F5FFFA;
+    -fx-background-insets: 0, 0 0 1 0;
+    -fx-padding: 0.0em;
+}
+.table-row-cell:even{
+    -fx-background-color: #93f9b911;
+    -fx-background-insets: 0, 0 0 1 0;
+    -fx-padding: 0.0em;
+}
+
+.table-row-cell:selected {
+    -fx-text-background-color: #fff;
+    -fx-background-color: #90E0EF;
+}
+
+
+.table-view .table-cell{
+    -fx-font-size:20px;
+    -fx-border-color: transparent;
+    -fx-padding: 2 0 2 10px;
+}
+
+.table-view .corner {
+    -fx-background-color: transparent;
+}
+
+table-view .cell{
+    -fx-cell-size: 30px;
+    -fx-aligment: CENTER;
+    -fx-text-fill : #000000;
+}
+
+.table-row-cell {
+    -fx-cell-size: 50px;
+}
+
+.table-view .scroll-bar:horizontal .thumb,
+.table-view .scroll-bar:vertical .thumb {
+    -fx-background-color:derive( #6622CC,90%);
+	-fx-background-insets: 2, 0, 0;
+	-fx-background-radius: 2em;
+
+}
+
+.table-view .scroll-bar:horizontal ,
+.table-view  .scroll-bar:vertical{
+    -fx-background-color:transparent;
+
+}
+
+/* The increment and decrement button CSS class of scrollbar */
+.table-view .increment-button ,.mylistview .decrement-button {
+    -fx-background-color:transparent;
+    -fx-border-color: transparent;
+}
+
+/* The main scrollbar **track** CSS class  */
+.table-view .scroll-bar:horizontal .track ,
+.table-view .scroll-bar:vertical .track{
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+    -fx-background-radius: 0em;
+}
+
+/* The main scrollbar **thumb** CSS class which we drag every time (movable) */
+.table-view .scroll-bar:horizontal .thumb,
+.table-view .scroll-bar:vertical .thumb {
+    -fx-background-color:derive(#00b4d8,90%);
+    -fx-background-insets: 0, 0, 0;
+    -fx-background-radius: 0em;
+
+}
+
+/* ------------------------------------------------------------------------------------- */
+/** EVENT CSS **/
+/* ------------------------------------------------------------------------------------- */
+
+/* The main scrollbar **track** CSS class on event of "hover" and "pressed" */
+
+.table-view .scroll-bar:horizontal:hover .track ,
+.table-view .scroll-bar:horizontal:pressed .track ,
+.table-view .scroll-bar:vertical:hover .track,
+.table-view .scroll-bar:vertical:pressed .track{
+    -fx-background-color: derive(#434343,20%);
+
+    -fx-opacity: 0.2;
+    -fx-background-radius: 0em;
+
+}
+
+/* The main scrollbar **thumb** CSS class on event of "hover" and "pressed" */
+.table-view .scroll-bar .thumb:hover,
+.table-view .scroll-bar .thumb:pressed{
+    -fx-background-color: derive(#00b4d8,50%);
+}
+
+.table-view .increment-button:hover ,.mylistview .decrement-button:hover {
+    -fx-background-color:derive(#00b4d8,100%);
+    -fx-border-color: transparent;	
+    -fx-padding:10px;
+}
+
+
+.tab{
+    -fx-pref-width: 140;
+    -fx-pref-height: 70; 
+    -fx-background-color: #caf0f8;
+}
+.tab-header-background{
+    -fx-background-color: #caf0f8;
+
+}
+.jfx-tab-pane .tab-selected-line{
+    -fx-border-color: #4361ee;
+
+}
+.jfx-tab-pane {
+    -fx-text-fill: red;
+
+}
+
+.jfx-tab-pane .tab .tab-label { 
+    -fx-alignment: CENTER;
+    -fx-font-size: 25px;
+    -fx-text-fill:#03045e;
+    -fx-cursor:hand;
+}
+
+.chart-pie-label{
+    -fx-fill: #00213C;
+    -fx-font-size: 18px;
+    -fx-stroke: #00213C;
+}
+
+/* .default-color0.chart-pie{-fx-pie-color:    }*/
+
+.chart-plot-background {
+    -fx-background-color: transparent;
+}
+
+.default-color0.chart-line-symbol{
+    -fx-background-color: #0074D1, white;
+}
+
+.default-color1.chart-line-symbol{
+    -fx-background-color: #51C9C2, white;
+}
+
+.axis{
+    -fx-stroke: #00213C;
+    -fx-fill: #00213C;
+    -fx-font-size: 25px;
+    -fx-tick-label-fill: #00213C;
+}
+
+.mylistview {
+    -fx-background: linear-gradient(to top right,#FFF, #DFF8FE );
+    -fx-border-color: transparent;
+}
+
+
+/* The main scrollbar CSS class of ListView */
+.mylistview .scroll-bar:horizontal ,
+.mylistview  .scroll-bar:vertical{
+    -fx-background-color:transparent;
+
+}
+
+/* The increment and decrement button CSS class of scrollbar */
+.mylistview .increment-button ,.mylistview .decrement-button {
+    -fx-background-color:transparent;
+    -fx-border-color: transparent;
+}
+
+/* The main scrollbar **track** CSS class  */
+.mylistview .scroll-bar:horizontal .track ,
+.mylistview .scroll-bar:vertical .track{
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+    -fx-background-radius: 0em;
+}
+
+/* The main scrollbar **thumb** CSS class which we drag every time (movable) */
+.mylistview .scroll-bar:horizontal .thumb,
+.mylistview .scroll-bar:vertical .thumb {
+    -fx-background-color:derive(#00b4d8,90%);
+    -fx-background-insets: 0, 0, 0;
+    -fx-background-radius: 0em;
+
+}
+
+/* ------------------------------------------------------------------------------------- */
+/** EVENT CSS **/
+/* ------------------------------------------------------------------------------------- */
+
+/* The main scrollbar **track** CSS class on event of "hover" and "pressed" */
+
+.mylistview .scroll-bar:horizontal:hover .track ,
+.mylistview .scroll-bar:horizontal:pressed .track ,
+.mylistview .scroll-bar:vertical:hover .track,
+.mylistview .scroll-bar:vertical:pressed .track{
+    -fx-background-color: derive(#434343,20%);
+
+    -fx-opacity: 0.2;
+    -fx-background-radius: 0em;
+
+}
+
+/* The main scrollbar **thumb** CSS class on event of "hover" and "pressed" */
+.mylistview .scroll-bar .thumb:hover,
+.mylistview .scroll-bar .thumb:pressed{
+    -fx-background-color: derive(#00b4d8,50%);
+}
+
+.mylistview .increment-button:hover ,.mylistview .decrement-button:hover {
+    -fx-background-color:derive(#00b4d8,100%);
+    -fx-border-color: transparent;	
+    -fx-padding:10px;
+}
+
+.quick{
+    -fx-background-radios: 15;
+    -fx-effect: dropshadow(three-pass-box, rgb(0, 0,0, 0.3), 10, 0, 0, 10);
+}
+
+/* Remove spacing */
+.pagination > .pagination-control > .control-box {
+    -fx-spacing: 5;
+}
+
+/* You can control the actual button sizes here */
+.pagination > .pagination-control > .control-box > .number-button,
+.pagination > .pagination-control > .control-box > .bullet-button,
+.pagination > .pagination-control > .control-box > .left-arrow-button,
+.pagination > .pagination-control > .control-box > .right-arrow-button {
+    -fx-background-insets: 0, 1;
+    -fx-background-color: lightgray, #FAFAFA;
+    -fx-min-width: 30;
+    -fx-min-height: 30;
+}
+
+/* Colors on hover */
+.pagination > .pagination-control > .control-box > .number-button:hover,
+.pagination > .pagination-control > .control-box > .bullet-button:hover,
+.pagination > .pagination-control > .control-box > .left-arrow-button:hover,
+.pagination > .pagination-control > .control-box > .right-arrow-button:hover {
+    -fx-background-insets: 0;
+    -fx-background-color: lightgray;
+}
+
+/* Selected toggle color */
+.pagination > .pagination-control > .control-box > .number-button:selected,
+.pagination > .pagination-control > .control-box > .bullet-button:selected{
+    -fx-background-insets: 0;
+    -fx-background-color: #00b4d8;
+    -fx-text-fill: white;
+}
+.pagination {
+    -fx-page-information-visible: false;
+}
+
+.pagination .page {
+    -fx-alignment: TOP_LEFT;
+}
+

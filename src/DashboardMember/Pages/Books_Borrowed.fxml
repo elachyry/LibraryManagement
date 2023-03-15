@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXDialog?>
+<?import com.jfoenix.controls.JFXDialogLayout?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<StackPane fx:id="satckPane" prefHeight="900.0" prefWidth="1600.0" stylesheets="@../../DashboardAdmin/DashboardStyle.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="DashboardMember.Controllers.Books_BorrowedController">
+   <children>
+      <AnchorPane fx:id="anchorPane" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+         <children>
+            <BorderPane prefHeight="604.0" prefWidth="1092.0" styleClass="grad" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <center>
+                  <VBox BorderPane.alignment="CENTER">
+                     <BorderPane.margin>
+                        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                     </BorderPane.margin>
+                     <children>
+                        <Pane prefHeight="95.0" prefWidth="1560.0">
+                           <children>
+                              <Label prefHeight="52.0" prefWidth="356.0" text="Borrowed Books:" textFill="#023e8a">
+                                 <font>
+                                    <Font name="Century Gothic Bold" size="41.0" />
+                                 </font>
+                              </Label>
+                              <JFXComboBox fx:id="Periods" focusColor="#00b4d8" labelFloat="true" layoutX="1225.0" layoutY="9.0" prefHeight="42.0" prefWidth="341.0" promptText="Period" style="-fx-font-size: 18;" />
+                           </children>
+                        </Pane>
+                        <AnchorPane fx:id="anchor" prefHeight="655.0" prefWidth="1560.0">
+                           <children>
+                              <GridPane fx:id="Container">
+                                 <rowConstraints>
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                              </GridPane>
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </VBox>
+               </center>
+               <top>
+                  <VBox prefHeight="185.0" prefWidth="1600.0" spacing="10.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <Label prefHeight="52.0" prefWidth="308.0" text="Status:" textFill="#023e8a">
+                           <font>
+                              <Font name="Century Gothic Bold" size="41.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                        </Label>
+                        <HBox fx:id="CategoryLayout" alignment="CENTER" prefHeight="90.0" prefWidth="1560.0" spacing="45.0">
+                           <children>
+                              <JFXButton onMouseClicked="#AllBooks" prefHeight="80.0" prefWidth="270.0" style="-fx-background-color: FF6C30;" styleClass="quick" text="All Books">
+                                 <font>
+                                    <Font name="Century Gothic" size="25.0" />
+                                 </font>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </JFXButton>
+                              <JFXButton onMouseClicked="#Pending" prefHeight="80.0" prefWidth="270.0" style="-fx-background-color: FDDB87;" styleClass="quick" text="Pending">
+                                 <font>
+                                    <Font name="Century Gothic" size="25.0" />
+                                 </font>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </JFXButton>
+                              <JFXButton onMouseClicked="#Accepted" prefHeight="80.0" prefWidth="270.0" style="-fx-background-color: A7D1B1;" styleClass="quick" text="Accepted">
+                                 <font>
+                                    <Font name="Century Gothic" size="25.0" />
+                                 </font>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </JFXButton>
+                              <JFXButton onMouseClicked="#Canceled" prefHeight="80.0" prefWidth="270.0" style="-fx-background-color: #6F6F6F;" styleClass="quick" text="Canceled">
+                                 <font>
+                                    <Font name="Century Gothic" size="25.0" />
+                                 </font>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </JFXButton>
+                              <JFXButton onMouseClicked="#Denied" prefHeight="80.0" prefWidth="270.0" style="-fx-background-color: EC505C;" styleClass="quick" text="Denied">
+                                 <font>
+                                    <Font name="Century Gothic" size="25.0" />
+                                 </font>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </JFXButton>
+                              <JFXButton onMouseClicked="#Returned" prefHeight="150.0" prefWidth="270.0" style="-fx-background-color: BDB2FE;" styleClass="quick" text="Returned">
+                                 <font>
+                                    <Font name="Century Gothic" size="25.0" />
+                                 </font>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </JFXButton>
+                           </children>
+                        </HBox>
+                     </children>
+                     <padding>
+                        <Insets bottom="5.0" left="20.0" right="20.0" top="5.0" />
+                     </padding>
+                  </VBox>
+               </top>
+            </BorderPane>
+         </children>
+      </AnchorPane>
+      <JFXDialog fx:id="Dialog2">
+         <content>
+            <JFXDialogLayout>
+               <body>
+                  <Label fx:id="DialogLabel" />
+               </body>
+               <actions>
+                  <JFXButton fx:id="YesButton" />
+                  <JFXButton fx:id="NoButton" />
+               </actions>
+            </JFXDialogLayout>
+         </content>
+      </JFXDialog>
+   </children>
+</StackPane>

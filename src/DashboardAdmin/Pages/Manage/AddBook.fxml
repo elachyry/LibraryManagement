@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.DialogPane?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+<DialogPane prefHeight="792.0" prefWidth="725.0" style="-fx-background-color: linear-gradient(to right, #0077B6, #48CAE4);" stylesheets="@../../DashboardStyle.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="DashboardAdmin.Pages.Manage.AddBookController">
+   <content>
+      <StackPane fx:id="stackPane" stylesheets="@MangesStyle.css">
+         <children>
+            <AnchorPane id="AnchorPane" fx:id="anchorePane" prefHeight="722.0" prefWidth="700.0" style="-fx-background-color: white;" stylesheets="@MangesStyle.css">
+               <children>
+                  <JFXTextField fx:id="ISBN" focusColor="#00b4d8" labelFloat="true" layoutX="31.0" layoutY="237.0" prefHeight="47.0" prefWidth="270.0" promptText="ISBN ">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </JFXTextField>
+                  <JFXTextField fx:id="Title" focusColor="#00b4d8" labelFloat="true" layoutX="400.0" layoutY="237.0" prefHeight="47.0" prefWidth="270.0" promptText="Title ">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </JFXTextField>
+                  <JFXTextField fx:id="Publisher" focusColor="#00b4d8" labelFloat="true" layoutX="31.0" layoutY="327.0" prefHeight="47.0" prefWidth="270.0" promptText="Publisher">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </JFXTextField>
+                  <JFXComboBox fx:id="Author" focusColor="#00b4d8" layoutX="400.0" layoutY="327.0" prefHeight="47.0" prefWidth="270.0" promptText="Author" style="-fx-font-size: 17;" />
+                  <JFXTextField fx:id="NbrCopies" focusColor="#00b4d8" labelFloat="true" layoutX="31.0" layoutY="426.0" prefHeight="47.0" prefWidth="270.0" promptText="Number Of Copies">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </JFXTextField>
+                  <JFXTextField fx:id="ReleaseDate" focusColor="#00b4d8" labelFloat="true" layoutX="400.0" layoutY="426.0" prefHeight="47.0" prefWidth="270.0" promptText="Release Date">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </JFXTextField>
+                  <JFXTextField fx:id="Language" focusColor="#00b4d8" labelFloat="true" layoutX="31.0" layoutY="511.0" prefHeight="47.0" prefWidth="270.0" promptText="Language">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </JFXTextField>
+                  <JFXComboBox fx:id="Category" focusColor="#00b4d8" layoutX="400.0" layoutY="511.0" prefHeight="47.0" prefWidth="270.0" promptText="Category" style="-fx-font-size: 17;" />
+                  <JFXTextField fx:id="NbrPages" focusColor="#00b4d8" labelFloat="true" layoutX="31.0" layoutY="597.0" prefHeight="47.0" prefWidth="270.0" promptText="Number Of Pages">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </JFXTextField>
+                  <JFXTextField fx:id="BookShelf" focusColor="#00b4d8" labelFloat="true" layoutX="400.0" layoutY="597.0" prefHeight="47.0" prefWidth="270.0" promptText="Book Shelf">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </JFXTextField>
+                  <JFXButton fx:id="AddButton" buttonType="RAISED" layoutX="132.0" layoutY="667.0" onAction="#Add_Book" prefHeight="47.0" prefWidth="167.0" styleClass="btn" text="Add Book" textFill="WHITE">
+                     <font>
+                        <Font name="Century Gothic" size="20.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton fx:id="CloseButton" buttonType="RAISED" layoutX="402.0" layoutY="667.0" onAction="#Cancel" prefHeight="47.0" prefWidth="167.0" styleClass="btn" text="Close" textFill="WHITE">
+                     <font>
+                        <Font name="Century Gothic" size="20.0" />
+                     </font>
+                  </JFXButton>
+                  <Pane layoutY="-19.0" prefHeight="117.0" prefWidth="700.0" style="-fx-background-color: linear-gradient(to right, #0077B6, #48CAE4);" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="-19.0">
+                     <children>
+                        <HBox alignment="CENTER" layoutY="19.0" prefHeight="102.0" prefWidth="700.0">
+                           <children>
+                              <Label fx:id="TitleLabel" alignment="CENTER" text="Add New Book" textFill="WHITE">
+                                 <font>
+                                    <Font size="62.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </HBox>
+                     </children>
+                  </Pane>
+                  <ImageView fx:id="AddAuthor" fitHeight="35.0" fitWidth="35.0" layoutX="357.0" layoutY="339.0" onMouseClicked="#Add_Author" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../Images/add_60px.png" />
+                     </image>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ImageView>
+                  <ImageView fx:id="AddCategory" fitHeight="35.0" fitWidth="35.0" layoutX="357.0" layoutY="523.0" onMouseClicked="#Add_Category" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../Images/add_60px.png" />
+                     </image>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ImageView>
+                  <ImageView fx:id="BookImage" fitHeight="103.0" fitWidth="106.0" layoutX="297.0" layoutY="118.0" onMouseClicked="#BrowseImage" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../Images/book.png" />
+                     </image>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ImageView>
+               </children>
+               <effect>
+                  <InnerShadow />
+               </effect>
+            </AnchorPane>
+         </children>
+      </StackPane>
+   </content>
+</DialogPane>

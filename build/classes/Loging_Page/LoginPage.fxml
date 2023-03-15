@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+
+<StackPane fx:id="stackPane" stylesheets="@Style.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Loging_Page.LoginPageController">
+   <children>
+      <AnchorPane fx:id="anchorPane">
+         <children>
+            <HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="715.0" prefWidth="1060.0" stylesheets="@Style.css">
+               <children>
+                  <VBox alignment="CENTER" prefHeight="715.0" prefWidth="530.0" style="-fx-background-color: linear-gradient(to right, #0077B6, #48CAE4);" HBox.hgrow="ALWAYS">
+                     <children>
+                        <ImageView fitHeight="207.0" fitWidth="176.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Images/reading_127px.png" />
+                           </image>
+                        </ImageView>
+                        <Label alignment="CENTER" text="Gestion de Biblio" textFill="WHITE">
+                           <font>
+                              <Font name="Century Gothic" size="62.0" />
+                           </font>
+                        </Label>
+                     </children>
+                     <padding>
+                        <Insets top="-70.0" />
+                     </padding>
+                  </VBox>
+                  <VBox fx:id="Right_VB" alignment="CENTER" prefHeight="715.0" prefWidth="530.0" style="-fx-background-color: white;" HBox.hgrow="ALWAYS">
+                     <children>
+                        <HBox alignment="CENTER" prefHeight="34.0" prefWidth="880.0">
+                           <children>
+                              <Label text="Welcom To Gestion Biblio!">
+                                 <font>
+                                    <Font name="Century Gothic" size="20.0" />
+                                 </font>
+                                 <padding>
+                                    <Insets right="10.0" />
+                                 </padding>
+                              </Label>
+                           </children>
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                           <children>
+                              <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../Images/21-avatar-outline%20(5).gif" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </HBox>
+                        <HBox alignment="TOP_CENTER" prefHeight="100.0" prefWidth="200.0">
+                           <children>
+                              <Label contentDisplay="BOTTOM" text="Sign in">
+                                 <font>
+                                    <Font name="Century Gothic" size="57.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="125.0" prefWidth="530.0" spacing="20.0">
+                           <children>
+                              <FontAwesomeIconView fx:id="User" fill="#023e8a" glyphName="USER" size="35">
+                                 <HBox.margin>
+                                    <Insets />
+                                 </HBox.margin>
+                              </FontAwesomeIconView>
+                              <JFXTextField fx:id="Txt_User" focusColor="#00b4d8" labelFloat="true" prefHeight="47.0" prefWidth="330.0" promptText="Username">
+                                 <font>
+                                    <Font name="Century Gothic" size="18.0" />
+                                 </font>
+                              </JFXTextField>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="125.0" prefWidth="530.0" spacing="20.0">
+                           <children>
+                              <FontAwesomeIconView fill="#023e8a" glyphName="KEY" size="35" text="" />
+                              <JFXPasswordField fx:id="Txt_PW" focusColor="#00b4d8" labelFloat="true" prefHeight="47.0" prefWidth="330.0" promptText="Password">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </JFXPasswordField>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="30.0" prefWidth="200.0">
+                           <padding>
+                              <Insets left="60.0" />
+                           </padding>
+                           <children>
+                              <Label onMouseClicked="#FPass" styleClass="FPass" text="Forgot Password?" textOverrun="LEADING_WORD_ELLIPSIS" underline="true">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets right="180.0" />
+                                 </HBox.margin>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="60.0">
+                           <children>
+                              <JFXButton buttonType="RAISED" onAction="#Btn_Connecter" prefHeight="47.0" prefWidth="167.0" styleClass="btn_login" text="Login" textFill="WHITE">
+                                 <font>
+                                    <Font name="Century Gothic" size="20.0" />
+                                 </font>
+                              </JFXButton>
+                              <JFXButton buttonType="RAISED" onAction="#btn_click" prefHeight="47.0" prefWidth="167.0" styleClass="btn_login" text="Close" textFill="WHITE">
+                                 <font>
+                                    <Font name="Century Gothic" size="20.0" />
+                                 </font>
+                              </JFXButton>
+                           </children>
+                        </HBox>
+                        <Label text="© 2021-2022">
+                           <font>
+                              <Font name="Century Gothic" size="16.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>

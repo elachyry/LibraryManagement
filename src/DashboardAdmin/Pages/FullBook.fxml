@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXDialog?>
+<?import com.jfoenix.controls.JFXDialogLayout?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.DialogPane?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+<DialogPane style="-fx-background-color: linear-gradient(to right, #0077B6, #48CAE4);" stylesheets="@../DashboardStyle.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="DashboardAdmin.Controllers.FullBookController">
+    <content>
+        <StackPane fx:id="stackPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="838.0" prefWidth="750.0" stylesheets="@../DashboardStyle.css">
+            <children>
+                <AnchorPane fx:id="anchorPane" prefHeight="526.0" prefWidth="600.0" style="-fx-background-color: white;" stylesheets="@../DashboardStyle.css">
+                    <children>
+                        <GridPane alignment="CENTER" gridLinesVisible="true" layoutX="52.0" layoutY="310.0" prefHeight="548.0" prefWidth="700.0" AnchorPane.bottomAnchor="82.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="161.0">
+                            <columnConstraints>
+                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="700.0" minWidth="10.0" prefWidth="380.0" />
+                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="380.0" minWidth="0.0" prefWidth="370.0" />
+                            </columnConstraints>
+                            <rowConstraints>
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            </rowConstraints>
+                            <children>
+                                <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                                    <children>
+                                        <Label alignment="CENTER" layoutX="158.0" layoutY="4.0" text="ISBN" textFill="#3e065f" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                                            <font>
+                                                <Font name="Century Gothic Bold" size="30.0" />
+                                            </font>
+                                        </Label>
+                                        <HBox alignment="CENTER" layoutX="165.0" layoutY="57.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                                            <children>
+                                                <Label fx:id="ISBN" text="ISBN">
+                                                    <font>
+                                                        <Font name="Century Gothic" size="25.0" />
+                                                    </font>
+                                                </Label>
+                                            </children>
+                                        </HBox>
+                                    </children>
+                                </AnchorPane>
+                                <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="1">
+                                    <children>
+                                        <Label alignment="CENTER" layoutX="143.0" layoutY="4.0" text="Author" textFill="#3e065f" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                                            <font>
+                                                <Font name="Century Gothic Bold" size="30.0" />
+                                            </font>
+                                        </Label>
+                                        <HBox alignment="CENTER" layoutX="149.0" layoutY="57.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                                            <children>
+                                                <Label fx:id="Author" text="Author">
+                                                    <font>
+                                                        <Font name="Century Gothic" size="25.0" />
+                                                    </font>
+                                                </Label>
+                                            </children>
+                                        </HBox>
+                                    </children>
+                                </AnchorPane>
+                                <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1">
+                                    <children>
+                                        <Label alignment="CENTER" layoutX="156.0" layoutY="4.0" text="Title" textFill="#3e065f" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                                            <font>
+                                                <Font name="Century Gothic Bold" size="30.0" />
+                                            </font>
+                                        </Label>
+                                        <HBox alignment="CENTER" layoutX="162.0" layoutY="57.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                                            <children>
+                                                <Label fx:id="Title" text="Title">
+                                                    <font>
+                                                        <Font name="Century Gothic" size="25.0" />
+                                                    </font>
+                                                </Label>
+                                            </children>
+                                        </HBox>
+                                    </children>
+                                </AnchorPane>
+                                <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                    <children>
+                                        <Label alignment="CENTER" layoutX="126.0" layoutY="4.0" text="Publisher" textFill="#3e065f" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                                            <font>
+                                                <Font name="Century Gothic Bold" size="30.0" />
+                                            </font>
+                                        </Label>
+                                        <HBox alignment="CENTER" layoutX="132.0" layoutY="57.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                                            <children>
+                                                <Label fx:id="Publisher" text="Publisher">
+                                                    <font>
+                                                        <Font name="Century Gothic" size="25.0" />
+                                                    </font>
+                                                </Label>
+                                            </children>
+                                        </HBox>
+                                    </children>
+                                </AnchorPane>
+                                <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="2">
+                                    <children>
+                                        <Label alignment="CENTER" layoutX="102.0" layoutY="4.0" text="Release Date" textFill="#3e065f" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                                            <font>
+                                                <Font name="Century Gothic Bold" size="30.0" />
+                                            </font>
+                                        </Label>
+                                        <HBox alignment="CENTER" layoutX="108.0" layoutY="57.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                                            <children>
+                                                <Label fx:id="ReleaseDate" text="Release Date">
+                                                    <font>
+                                                        <Font name="Century Gothic" size="25.0" />
+                                                    </font>
+                                                </Label>
+                                            </children>
+                                        </HBox>
+                                    </children>
+                                </AnchorPane>
+                                <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="3">
+                                    <children>
+                                        <Label alignment="CENTER" layoutX="125.0" layoutY="4.0" text="Category" textFill="#3e065f" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                                            <font>
+                                                <Font name="Century Gothic Bold" size="30.0" />
+                                            </font>
+                                        </Label>
+                                        <HBox alignment="CENTER" layoutX="132.0" layoutY="57.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                                            <children>
+                                                <Label fx:id="Category" text="Category">
+                                                    <font>
+                                                        <Font name="Century Gothic" size="25.0" />
+                                                    </font>
+                                                </Label>
+                                            </children>
+                                        </HBox>
+                                    </children>
+                                </AnchorPane>
+                                <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="4">
+                                    <children>
+                                        <Label alignment="CENTER" layoutX="122.0" layoutY="4.0" text="Book Shelf" textFill="#3e065f" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                                            <font>
+                                                <Font name="Century Gothic Bold" size="30.0" />
+                                            </font>
+                                        </Label>
+                                        <HBox alignment="CENTER" layoutX="128.0" layoutY="57.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                                            <children>
+                                                <Label fx:id="BookShelf" text="Book Shelf">
+                                                    <font>
+                                                        <Font name="Century Gothic" size="25.0" />
+                                                    </font>
+                                                </Label>
+                                            </children>
+                                        </HBox>
+                                    </children>
+                                </AnchorPane>
+                                <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                    <children>
+                                        <Label alignment="CENTER" layoutX="116.0" layoutY="4.0" text="Language" textFill="#3e065f" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                                            <font>
+                                                <Font name="Century Gothic Bold" size="30.0" />
+                                            </font>
+                                        </Label>
+                                        <HBox alignment="CENTER" layoutX="122.0" layoutY="57.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                                            <children>
+                                                <Label fx:id="Language" text="Language">
+                                                    <font>
+                                                        <Font name="Century Gothic" size="25.0" />
+                                                    </font>
+                                                </Label>
+                                            </children>
+                                        </HBox>
+                                    </children>
+                                </AnchorPane>
+                                <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                                    <children>
+                                        <Label alignment="CENTER" layoutX="71.0" layoutY="4.0" text="Number Of Pages" textFill="#3e065f" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                                            <font>
+                                                <Font name="Century Gothic Bold" size="30.0" />
+                                            </font>
+                                        </Label>
+                                        <HBox alignment="CENTER" layoutX="77.0" layoutY="57.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                                            <children>
+                                                <Label fx:id="NbrOfPages" text="Number Of Pages">
+                                                    <font>
+                                                        <Font name="Century Gothic" size="25.0" />
+                                                    </font>
+                                                </Label>
+                                            </children>
+                                        </HBox>
+                                    </children>
+                                </AnchorPane>
+                                <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                                    <children>
+                                        <Label alignment="CENTER" layoutX="66.0" layoutY="4.0" text="Number Of Copies" textFill="#3e065f" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                                            <font>
+                                                <Font name="Century Gothic Bold" size="30.0" />
+                                            </font>
+                                        </Label>
+                                        <HBox alignment="CENTER" layoutX="72.0" layoutY="57.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                                            <children>
+                                                <Label fx:id="NbrOfCopies" text="Number Of Copies">
+                                                    <font>
+                                                        <Font name="Century Gothic" size="25.0" />
+                                                    </font>
+                                                </Label>
+                                            </children>
+                                        </HBox>
+                                    </children>
+                                </AnchorPane>
+                            </children>
+                        </GridPane>
+                        <HBox fx:id="VBoxButt" alignment="CENTER" layoutX="113.0" layoutY="686.0" prefHeight="96.0" prefWidth="700.0" spacing="100.0" AnchorPane.bottomAnchor="-14.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                            <children>
+                                <JFXButton fx:id="BorrowBook" buttonType="RAISED" focusTraversable="false" onMouseClicked="#Borrow" prefHeight="52.0" prefWidth="181.0" styleClass="btn" text="Borrow This" textFill="WHITE">
+                                    <font>
+                                        <Font name="Century Gothic" size="27.0" />
+                                    </font>
+                                    <HBox.margin>
+                                        <Insets bottom="10.0" />
+                                    </HBox.margin>
+                                    <cursor>
+                                        <Cursor fx:constant="HAND" />
+                                    </cursor>
+                                </JFXButton>
+                                <JFXButton buttonType="RAISED" focusTraversable="false" onMouseClicked="#Close" prefHeight="47.0" prefWidth="167.0" styleClass="btn" text="Close" textFill="WHITE">
+                                    <font>
+                                        <Font name="Century Gothic" size="27.0" />
+                                    </font>
+                                    <cursor>
+                                        <Cursor fx:constant="HAND" />
+                                    </cursor>
+                                    <HBox.margin>
+                                        <Insets bottom="10.0" />
+                                    </HBox.margin>
+                                </JFXButton>
+                            </children>
+                        </HBox>
+                        <HBox alignment="CENTER" layoutX="216.0" layoutY="8.0" prefHeight="161.0" prefWidth="700.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                            <children>
+                                <ImageView fx:id="BookImage" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../../Images/112-book-morph-outline.gif" />
+                                    </image>
+                                </ImageView>
+                            </children>
+                        </HBox>
+                    </children>
+                    <effect>
+                        <InnerShadow />
+                    </effect>
+                </AnchorPane>
+                <JFXDialog fx:id="Dialog2" stylesheets="@../DashboardStyle.css">
+                    <JFXDialogLayout>
+                        <body>
+                            <Label fx:id="DialogLabel" />
+                        </body>
+                        <actions>
+                            <JFXButton fx:id="YesButton">Yes</JFXButton>
+                            <JFXButton fx:id="NoButton">No</JFXButton>
+                        </actions>
+                    </JFXDialogLayout>
+                </JFXDialog>
+            </children>
+        </StackPane>
+    </content>
+</DialogPane>

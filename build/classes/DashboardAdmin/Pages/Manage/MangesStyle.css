@@ -1,0 +1,29 @@
+.btn{
+    -fx-background-color: #023e8a;
+    -fx-background-radius: 12px;
+}
+
+.btn:hover{
+    -fx-cursor: hand;
+    -fx-background-color: #00b4d8;
+    
+}
+
+.btn:pressed{
+    -fx-rotate: 1;
+}
+
+.grad{
+    -fx-background-color: linear-gradient(to bottom right, #FFF, #DFF8FE);
+}
+
+.jfx-snackbar-content{
+    -fx-background-color: #F00;
+    -fx-pref-vidth: 500;
+}
+.jfx-snackbar-toast{
+    -fx-text-fill: #FFF;
+    -fx-font-size: 18px;
+    -fx-font-family: Century Gothic;
+}
+
